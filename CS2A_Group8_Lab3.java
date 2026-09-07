@@ -31,6 +31,7 @@ public class CS2A_Group8_Lab3 {
                     case 1:
                         bubblesort();
                         validAction = true;
+                        returnButton();
                         break;
                     case 2:
                         break;
@@ -107,6 +108,7 @@ public class CS2A_Group8_Lab3 {
                 break;
             }
         }
+        returnButton();
     }
     public static void bubblesort(){
     System.out.println("════════════════════════════════════════════════════════════");
@@ -148,13 +150,21 @@ public class CS2A_Group8_Lab3 {
         System.out.println("════════════════════════════════════════════════════════════");
         System.out.println("             ───✧─✦── SELECTION SORT ──✦─✧───             ");
         System.out.println("════════════════════════════════════════════════════════════");
-
     }
-
     public static void insertionsort(){
         System.out.println("════════════════════════════════════════════════════════════");
         System.out.println("             ───✧─✦── INSERTION SORT ──✦─✧───             ");
         System.out.println("════════════════════════════════════════════════════════════");
         
+    }
+        public static void returnButton() {
+        System.out.println();
+        System.out.println("────────────────────────────────────────────────────────────");
+        System.out.println("          PRESS ENTER TO RETURN TO THE MAIN MENU...         ");
+        System.out.println("────────────────────────────────────────────────────────────");
+        System.out.println();
+        
+        sc.nextLine(); 
+        clearConsole();
     }
 }
