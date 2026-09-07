@@ -13,6 +13,7 @@ public class CS2A_Group8_Lab3 {
     static Scanner sc = new Scanner(System.in);
     public static void main() {
         array = createArray();
+        insertElement(array);
         boolean run = true;
         do {
             printMenu();
@@ -85,4 +86,19 @@ public class CS2A_Group8_Lab3 {
         System.out.print("\f");
         System.out.flush();
     }
+    public static void insertElement(int[] array) {
+    System.out.println();
+    for (int i = 0; i < array.length; i++) {
+        while (true) {
+            System.out.print(" ■ Enter element [" + (i + 1) + "/" + array.length + "]: ");
+            int val = getValidInt();
+            if (val == Integer.MIN_VALUE) {
+                System.out.println(" ▶ Invalid Input. Please enter a number.");
+                continue;
+            }
+            array[i] = val;
+            break;
+        }
+    }
+}
 }
