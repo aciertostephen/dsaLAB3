@@ -29,7 +29,7 @@ public class CS2A_Group8_Lab3 {
                 }
                 switch (selection) {
                     case 1:
-                        bsort();
+                        bubblesort();
                         validAction = true;
                         break;
                     case 2:
@@ -108,7 +108,7 @@ public class CS2A_Group8_Lab3 {
             }
         }
     }
-    public static void bsort(){
+    public static void bubblesort(){
         System.out.println("════════════════════════════════════════════════════════════");
         System.out.println("         ───✧─✦── OPTIMIZED BUBBLE SORT ──✦─✧───          ");
         System.out.println("════════════════════════════════════════════════════════════");
@@ -137,5 +137,18 @@ public class CS2A_Group8_Lab3 {
                 break;
             }
         }
+    }
+    public static void selectionsort(){
+        System.out.println("════════════════════════════════════════════════════════════");
+        System.out.println("             ───✧─✦── SELECTION SORT ──✦─✧───             ");
+        System.out.println("════════════════════════════════════════════════════════════");
+
+    }
+
+    public static void insertionsort(){
+        System.out.println("════════════════════════════════════════════════════════════");
+        System.out.println("             ───✧─✦── INSERTION SORT ──✦─✧───             ");
+        System.out.println("════════════════════════════════════════════════════════════");
+        
     }
 }
