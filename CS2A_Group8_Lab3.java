@@ -29,6 +29,8 @@ public class CS2A_Group8_Lab3 {
                 }
                 switch (selection) {
                     case 1:
+                        bsort();
+                        validAction = true;
                         break;
                     case 2:
                         break;
@@ -92,18 +94,44 @@ public class CS2A_Group8_Lab3 {
     }
     
     public static void insertElement(int[] array) {
-    System.out.println();
-    for (int i = 0; i < array.length; i++) {
-        while (true) {
-            System.out.print(" ■ Enter element [" + (i + 1) + "/" + array.length + "]: ");
-            int val = getValidInt();
-            if (val == Integer.MIN_VALUE) {
-                System.out.println(" ▶ Invalid Input. Please enter a number.");
-                continue;
+        System.out.println();
+        for (int i = 0; i < array.length; i++) {
+            while (true) {
+                System.out.print(" ■ Enter element [" + (i + 1) + "/" + array.length + "]: ");
+                int val = getValidInt();
+                if (val == Integer.MIN_VALUE) {
+                    System.out.println(" ▶ Invalid Input. Please enter a number.");
+                    continue;
+                }
+                array[i] = val;
+                break;
             }
-            array[i] = val;
-            break;
         }
     }
+    public static void bsort(){
+        System.out.print("Original: ");
+        for(int n : array){
+            System.out.print(n + " ");
+            System.out.println();
+        }
+        for(int i = 0; i < array.length - 1; i++){
+            boolean swapped = false;
+            for(int j = 0; j < array.length - 1 - i; j++){
+                if(array[j] > array[j+1]){
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                    swapped = true;
+                }
+            }
+            System.out.print("Iteration " + (i + 1) + ": ");
+            for (int n : array) {
+                System.out.print(n + " ");
+            }
+            System.out.println();
+            if(swapped == false){
+                break;
+            }
+        }
     }
 }
