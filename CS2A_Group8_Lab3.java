@@ -34,6 +34,9 @@ public class CS2A_Group8_Lab3 {
                         returnButton();
                         break;
                     case 2:
+                        insertionsort();
+                        validAction = true;
+                        returnButton();
                         break;
                     case 3:
                         break;
@@ -153,11 +156,34 @@ public class CS2A_Group8_Lab3 {
     }
     public static void insertionsort(){
         System.out.println("════════════════════════════════════════════════════════════");
-        System.out.println("             ───✧─✦── INSERTION SORT ──✦─✧───             ");
+        System.out.println("            ───✧─✦── INSERTION SORT ──✦─✧───              ");
         System.out.println("════════════════════════════════════════════════════════════");
-        
+        System.out.print("Given Array Elements: ");
+        for(int n : array){
+            System.out.printf("%5d", n);
+        }
+        System.out.println();
+        for (int i = 1; i < array.length; i++) {
+            int key = array[i];
+            int j = i - 1;
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
+                j--;
+            }
+            array[j + 1] = key;
+            System.out.printf("%d. ", i);
+            for (int n : array) {
+                System.out.printf("%5d", n);
+            }
+            System.out.println();
+        }
+        System.out.println("Sorted Array Elements:");
+        for (int n : array) {
+            System.out.printf("%5d", n);
+        }
+        System.out.println();
     }
-        public static void returnButton() {
+    public static void returnButton() {
         System.out.println();
         System.out.println("────────────────────────────────────────────────────────────");
         System.out.println("          PRESS ENTER TO RETURN TO THE MAIN MENU...         ");
