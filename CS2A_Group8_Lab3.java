@@ -56,7 +56,7 @@ public class CS2A_Group8_Lab3 {
         System.out.println("════════════════════════════════════════════════════════════");
         System.out.println("                          ‹ menu ›                          ");
         System.out.println("────────────────────────────────────────────────────────────"); 
-        System.out.println()
+        System.out.println();
         System.out.println("                  [ 1 ]      Optimized Bubble Sort          ");
         System.out.println("                  [ 2 ]      Selection Sort                 ");
         System.out.println("                  [ 3 ]      Insertion Sort                 ");
