@@ -49,7 +49,7 @@ public class CS2A_Group8_Lab3 {
         } while (run);
     }
     public static void printMenu(){
-        clearConsole();
+        //clearConsole();
         System.out.println();
         System.out.println("════════════════════════════════════════════════════════════");
         System.out.println("         ───✧─✦── SORTING ALGORITHMS ──✦─✧───            ");
@@ -109,11 +109,15 @@ public class CS2A_Group8_Lab3 {
         }
     }
     public static void bsort(){
-        System.out.print("Original: ");
+        System.out.println("════════════════════════════════════════════════════════════");
+        System.out.println("         ───✧─✦── OPTIMIZED BUBBLE SORT ──✦─✧───          ");
+        System.out.println("════════════════════════════════════════════════════════════");
+
+        System.out.print("Given Array Elements: ");
         for(int n : array){
-            System.out.print(n + " ");
-            System.out.println();
+            System.out.printf("%5d", n);
         }
+        System.out.println();
         for(int i = 0; i < array.length - 1; i++){
             boolean swapped = false;
             for(int j = 0; j < array.length - 1 - i; j++){
@@ -126,7 +130,7 @@ public class CS2A_Group8_Lab3 {
             }
             System.out.print("Iteration " + (i + 1) + ": ");
             for (int n : array) {
-                System.out.print(n + " ");
+                System.out.printf("%5d", n);
             }
             System.out.println();
             if(swapped == false){
