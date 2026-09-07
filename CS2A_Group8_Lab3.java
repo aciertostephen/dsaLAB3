@@ -20,9 +20,7 @@ public class CS2A_Group8_Lab3 {
         do {
             printMenu();
             boolean validAction = false;
-    
             while (!validAction) {
-
                 System.out.print("Enter Choice: ");
                 int selection = getValidInt();
                 if ((selection == Integer.MIN_VALUE) || (selection < 0 || selection > 4)) {
@@ -36,11 +34,11 @@ public class CS2A_Group8_Lab3 {
                         returnButton();
                         break;
                     case 2:
+                        break;
+                    case 3:
                         insertionsort();
                         validAction = true;
                         returnButton();
-                        break;
-                    case 3:
                         break;
                     case 4:
                         System.out.println("\n───────────────────┤ ✦ PROGRAM CLOSED ✦ ├──────────────────");
