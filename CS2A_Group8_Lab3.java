@@ -11,9 +11,11 @@ import java.util.Scanner;
 public class CS2A_Group8_Lab3 {
     static int [] array = null;
     static Scanner sc = new Scanner(System.in);
+    static int[] original = null;
     public static void main() {
         array = createArray();
         insertElement(array);
+        original = array.clone();
         boolean run = true;
         do {
             printMenu();
@@ -114,47 +116,48 @@ public class CS2A_Group8_Lab3 {
         returnButton();
     }
     public static void bubblesort(){
-    System.out.println("════════════════════════════════════════════════════════════");
-    System.out.println("         ───✧─✦── OPTIMIZED BUBBLE SORT ──✦─✧───          ");
-    System.out.println("════════════════════════════════════════════════════════════");
-
-    System.out.print("Given Array Elements: ");
-    for(int n : array){
-        System.out.printf("%5d", n);
-    }
-    System.out.println();
-
-    for(int i = 0; i < array.length - 1; i++){
-        boolean swapped = false;
-        for(int j = 0; j < array.length - 1 - i; j++){
-            if(array[j] > array[j+1]){
-                int temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
-                swapped = true;
+        array = original.clone();
+        System.out.println("════════════════════════════════════════════════════════════");
+        System.out.println("         ───✧─✦── OPTIMIZED BUBBLE SORT ──✦─✧───          ");
+        System.out.println("════════════════════════════════════════════════════════════");
+        System.out.print("Given Array Elements: ");
+        for(int n : array){
+            System.out.printf("%5d", n);
+        }
+        System.out.println();
+        for(int i = 0; i < array.length - 1; i++){
+            boolean swapped = false;
+            for(int j = 0; j < array.length - 1 - i; j++){
+                if(array[j] > array[j+1]){
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                    swapped = true;
+                }
+            }
+            System.out.printf("%d. ", (i + 1));
+            for (int n : array) {
+                System.out.printf("%5d", n);
+            }
+            System.out.println();
+            if(swapped == false){
+            break;
             }
         }
-        System.out.printf("%d. ", (i + 1));
+        System.out.println("Sorted Array Elements:");
         for (int n : array) {
             System.out.printf("%5d", n);
         }
         System.out.println();
-        if(swapped == false){
-            break;
-        }
     }
-    System.out.println("Sorted Array Elements:");
-    for (int n : array) {
-        System.out.printf("%5d", n);
-    }
-    System.out.println();
-}
     public static void selectionsort(){
+        array = original.clone();
         System.out.println("════════════════════════════════════════════════════════════");
         System.out.println("             ───✧─✦── SELECTION SORT ──✦─✧───             ");
         System.out.println("════════════════════════════════════════════════════════════");
     }
     public static void insertionsort(){
+        array = original.clone();
         System.out.println("════════════════════════════════════════════════════════════");
         System.out.println("            ───✧─✦── INSERTION SORT ──✦─✧───              ");
         System.out.println("════════════════════════════════════════════════════════════");
