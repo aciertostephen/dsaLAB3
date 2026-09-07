@@ -52,11 +52,11 @@ public class CS2A_Group8_Lab3 {
         //clearConsole();
         System.out.println();
         System.out.println("════════════════════════════════════════════════════════════");
-        System.out.println("         ───✧─✦── SORTING ALGORITHMS ──✦─✧───            ");
+        System.out.println("          ───✧─✦── SORTING ALGORITHMS ──✦─✧───            ");
         System.out.println("════════════════════════════════════════════════════════════");
         System.out.println("                          ‹ menu ›                          ");
         System.out.println("────────────────────────────────────────────────────────────"); 
-        System.out.println();
+        System.out.println()
         System.out.println("                  [ 1 ]      Optimized Bubble Sort          ");
         System.out.println("                  [ 2 ]      Selection Sort                 ");
         System.out.println("                  [ 3 ]      Insertion Sort                 ");
@@ -109,35 +109,41 @@ public class CS2A_Group8_Lab3 {
         }
     }
     public static void bubblesort(){
-        System.out.println("════════════════════════════════════════════════════════════");
-        System.out.println("         ───✧─✦── OPTIMIZED BUBBLE SORT ──✦─✧───          ");
-        System.out.println("════════════════════════════════════════════════════════════");
+    System.out.println("════════════════════════════════════════════════════════════");
+    System.out.println("         ───✧─✦── OPTIMIZED BUBBLE SORT ──✦─✧───          ");
+    System.out.println("════════════════════════════════════════════════════════════");
 
-        System.out.print("Given Array Elements: ");
-        for(int n : array){
+    System.out.print("Given Array Elements: ");
+    for(int n : array){
+        System.out.printf("%5d", n);
+    }
+    System.out.println();
+
+    for(int i = 0; i < array.length - 1; i++){
+        boolean swapped = false;
+        for(int j = 0; j < array.length - 1 - i; j++){
+            if(array[j] > array[j+1]){
+                int temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
+                swapped = true;
+            }
+        }
+        System.out.printf("%d. ", (i + 1));
+        for (int n : array) {
             System.out.printf("%5d", n);
         }
         System.out.println();
-        for(int i = 0; i < array.length - 1; i++){
-            boolean swapped = false;
-            for(int j = 0; j < array.length - 1 - i; j++){
-                if(array[j] > array[j+1]){
-                    int temp = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = temp;
-                    swapped = true;
-                }
-            }
-            System.out.print("Iteration " + (i + 1) + ": ");
-            for (int n : array) {
-                System.out.printf("%5d", n);
-            }
-            System.out.println();
-            if(swapped == false){
-                break;
-            }
+        if(swapped == false){
+            break;
         }
     }
+    System.out.println("Sorted Array Elements:");
+    for (int n : array) {
+        System.out.printf("%5d", n);
+    }
+    System.out.println();
+}
     public static void selectionsort(){
         System.out.println("════════════════════════════════════════════════════════════");
         System.out.println("             ───✧─✦── SELECTION SORT ──✦─✧───             ");
