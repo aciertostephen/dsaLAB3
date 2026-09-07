@@ -20,9 +20,10 @@ public class CS2A_Group8_Lab3 {
             boolean validAction = false;
     
             while (!validAction) {
+
                 System.out.print("Enter Choice: ");
                 int selection = getValidInt();
-                if ((selection == Integer.MIN_VALUE) || (selection < 0 || selection > 5)) {
+                if ((selection == Integer.MIN_VALUE) || (selection < 0 || selection > 4)) {
                     System.out.println(" ▶ Selection invalid. Please try again.");
                     continue;
                 }
@@ -37,6 +38,9 @@ public class CS2A_Group8_Lab3 {
                         System.out.println("\n───────────────────┤ ✦ PROGRAM CLOSED ✦ ├──────────────────");
                         run = false;
                         validAction = true;
+                        break;
+                    default: 
+                        System.out.println(" ▶ Selection invalid. Please try again.");
                         break;
                 }
             }
@@ -86,6 +90,7 @@ public class CS2A_Group8_Lab3 {
         System.out.print("\f");
         System.out.flush();
     }
+    
     public static void insertElement(int[] array) {
     System.out.println();
     for (int i = 0; i < array.length; i++) {
@@ -100,5 +105,5 @@ public class CS2A_Group8_Lab3 {
             break;
         }
     }
-}
+    }
 }
