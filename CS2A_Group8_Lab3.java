@@ -2,9 +2,9 @@ import java.util.Scanner;
 /**
  *
  * Group #8
- * Authors:(Leader)
- * (Member1)
- * (Member2)
+ * Authors: Zac Luther L. Salceda
+ * Stephen Shane Acierto
+ * Genrev R. Pedrita
  * Laboratory Exercise #3
  * Date: Sept 7 , 2026
  */
