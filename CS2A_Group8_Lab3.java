@@ -34,15 +34,12 @@ public class CS2A_Group8_Lab3 {
                 switch (selection) {
                         case 1:
                             bubbleSort();
-                            enterButton("                       PRESS ENTER TO RETURN TO MAIN MENU                      ");
                             break;
                         case 2:
                             selectionSort();
-                            enterButton("                       PRESS ENTER TO RETURN TO MAIN MENU                      ");
                             break;
                         case 3:
                             insertionSort();
-                            enterButton("                       PRESS ENTER TO RETURN TO MAIN MENU                      ");
                             break;
                         case 4:
                             boolean tryAgain = exit();
@@ -53,11 +50,9 @@ public class CS2A_Group8_Lab3 {
                             } else {
                                 runMenu = false;
                             } 
-                            break;
-                        default: 
-                            System.out.println("\n                  ✧ Selection invalid. Please try again. ✧                  \n");
-                            break;
+                        continue;
                 }
+                enterButton("                       PRESS ENTER TO RETURN TO MAIN MENU                      ");
             }
         } while (runProgram);
     }
@@ -128,7 +123,7 @@ public class CS2A_Group8_Lab3 {
                        break;
                     }
                 }
-                if (duplicate == true) {
+                if (duplicate) {
                     System.out.println("\n                    ✧ Duplicate values are not allowed. ✧                    \n");
                     continue; 
                 }
