@@ -2,9 +2,9 @@ import java.util.Scanner;
 /**
  * 
  * Group #8
- * Authors:(Leader)
- * (Member1)
- * (Member2)
+ * Authors:Zac Luther Salceda
+ * Stephen Shane Acierto
+ * Genrev Pedrito
  * Laboratory Exercise #3
  * Date: Sept 7 , 2026
  */
@@ -27,7 +27,7 @@ public class CS2A_Group8_Lab3 {
                 System.out.print(" ■ Enter your choice: ");
                 int selection = getValidInt();
                 if ((selection == Integer.MIN_VALUE) || (selection < 1 || selection > 4)) {
-                    System.out.println(" ▶ Selection invalid. Please try again.");
+                    System.out.println("\n      ✧ Selection invalid. Please try again. ✧       \n");
                     continue;
                 }
             
@@ -47,7 +47,7 @@ public class CS2A_Group8_Lab3 {
                         case 4:
                             boolean tryAgain = exit();
                             if (!tryAgain) {
-                                System.out.print("\n───────────────┤ ✦ PROGRAM CLOSED ✦ ├────────────────");
+                                System.out.print("\n───────────────┤ ✦ PROGRAM CLOSED ✦ ├─────────────────");
                                 runMenu = false;
                                 runProgram = false;
                             } else {
@@ -55,7 +55,7 @@ public class CS2A_Group8_Lab3 {
                             } 
                             break;
                         default: 
-                            System.out.println(" ▶ Selection invalid. Please try again.");
+                            System.out.println("\n      ✧ Selection invalid. Please try again. ✧       \n");
                             break;
                 }
             }
@@ -65,18 +65,18 @@ public class CS2A_Group8_Lab3 {
     public static void printMenu() {
         clearConsole();
         System.out.println();
-        System.out.println("══════════════════════════════════════════════════════");
+        System.out.println("═══════════════════════════════════════════════════════");
         System.out.println("        ───✧─✦── SORTING ALGORITHMS ──✦─✧───       ");
-        System.out.println("══════════════════════════════════════════════════════");
+        System.out.println("═══════════════════════════════════════════════════════");
         System.out.println("                        ‹ menu ›                      ");
-        System.out.println("──────────────────────────────────────────────────────"); 
+        System.out.println("───────────────────────────────────────────────────────"); 
         System.out.println();
         System.out.println("           [ 1 ]      Optimized Bubble Sort           ");
         System.out.println("           [ 2 ]      Selection Sort                  ");
         System.out.println("           [ 3 ]      Insertion Sort                  ");
         System.out.println("           [ 4 ]      Exit                            ");
         System.out.println();
-        System.out.println("══════════════════════════════════════════════════════");
+        System.out.println("═══════════════════════════════════════════════════════");
         System.out.println();
     }
     
@@ -84,21 +84,21 @@ public class CS2A_Group8_Lab3 {
         clearConsole();
         int size;
         
-        System.out.println("══════════════════════════════════════════════════════");
-        System.out.println("   ───✧─✦── ENTER ARRAY SIZE [ 5 - 15 ] ──✦─✧───   ");
-        System.out.println("══════════════════════════════════════════════════════");
+        System.out.println("═══════════════════════════════════════════════════════");
+        System.out.println("    ───✧─✦── ENTER ARRAY SIZE [ 5 - 15 ] ──✦─✧───   ");
+        System.out.println("═══════════════════════════════════════════════════════");
         System.out.println();
         
         while (true) {
             System.out.print(" ■ Enter your choice : ");
             size = getValidInt();
             if ((size == Integer.MIN_VALUE) || (size < 5 || size > 15)) {
-                System.out.println(" ▶ Invalid. Please choose a number between 5 and 15.");
+                System.out.println("\n ✧ Invalid. Please choose a number between 5 and 15. ✧\n");
                 continue;
             }
             break;
-        }
-        System.out.println(" ▶ Array created with size " + size + "."); 
+        }         
+        System.out.println("\n           ✦ Array created with size " + size + "✦"); 
         enterButton("             PRESS ENTER TO INSERT ELEMENTS            ");
         return new int[size];
     }
@@ -107,9 +107,9 @@ public class CS2A_Group8_Lab3 {
         clearConsole();
         System.out.println();
         
-        System.out.println("══════════════════════════════════════════════════════");
+        System.out.println("═══════════════════════════════════════════════════════");
         System.out.println("       ───✧─✦── INSERT ARRAY VALUES ──✦─✧───       ");
-        System.out.println("══════════════════════════════════════════════════════");
+        System.out.println("═══════════════════════════════════════════════════════");
         System.out.println();
         
         int count = 0;
@@ -118,7 +118,7 @@ public class CS2A_Group8_Lab3 {
             int val = getValidInt();
             
                   if (val == Integer.MIN_VALUE) {
-                    System.out.println(" ▶ Invalid Input. Please enter a number.");
+                    System.out.println("\n      ✧ Invalid Input. Please enter a number. ✧      \n");
                     continue;
                 }
                 boolean duplicate = false;
@@ -129,8 +129,8 @@ public class CS2A_Group8_Lab3 {
                     }
                 }
                 if (duplicate == true) {
-                    System.out.println(" Duplicate values are not allowed.");
-                    continue;
+                    System.out.println("\n       ✧  Duplicate values are not allowed.  ✧       \n");
+                    continue; 
                 }
                 
                 array[count] = val;
@@ -144,13 +144,12 @@ public class CS2A_Group8_Lab3 {
         clearConsole();
         array = original.clone();
         
-        System.out.println("══════════════════════════════════════════════════════");
+        System.out.println("═══════════════════════════════════════════════════════");
         System.out.println("      ───✧─✦── OPTIMIZED BUBBLE SORT ──✦─✧───       ");
-        System.out.println("══════════════════════════════════════════════════════");
-        System.out.println();
-        
-        System.out.println("Given Array Elements:");
+        System.out.println("═══════════════════════════════════════════════════════");
+        System.out.println("                Given Array Elements:                  "); 
         printInColumns(array);
+        System.out.println("───────────────────────────────────────────────────────"); 
         System.out.println();
     
         for (int i = 0; i < array.length - 1; i++) {
@@ -164,7 +163,7 @@ public class CS2A_Group8_Lab3 {
                 }
             }
     
-            System.out.println("Iteration " + (i + 1) + ":");
+            System.out.println("○ Iteration " + (i + 1) + ":");
             printInColumns(array);
             System.out.println();
     
@@ -173,21 +172,22 @@ public class CS2A_Group8_Lab3 {
             }
         }
     
-        System.out.println("Sorted Array Elements : ");
-        printInColumns(array);
+        System.out.println("═══════════════════════════════════════════════════════");
+        System.out.println("               Sorted Array Elements :                 ");
+        printInColumns(array); 
+        System.out.println("═══════════════════════════════════════════════════════");
     }
     
     public static void selectionSort() {
         clearConsole();
         array = original.clone();
         
-        System.out.println("══════════════════════════════════════════════════════");
-        System.out.println("         ───✧─✦── SELECTION SORT ──✦─✧───          ");
-        System.out.println("══════════════════════════════════════════════════════");
-        System.out.println();
-        
-        System.out.println("Given Array Elements:");
+        System.out.println("═══════════════════════════════════════════════════════");
+        System.out.println("         ───✧─✦── SELECTION SORT ──✦─✧───           ");
+        System.out.println("═══════════════════════════════════════════════════════");
+        System.out.println("                Given Array Elements:                  "); 
         printInColumns(array);
+        System.out.println("───────────────────────────────────────────────────────"); 
         System.out.println();
     
         for (int i = 0; i < array.length - 1; i++) {
@@ -205,24 +205,24 @@ public class CS2A_Group8_Lab3 {
             printInColumns(array); 
             System.out.println();
         }
-    
-        System.out.println("Sorted Array Elements : ");
+        System.out.println("═══════════════════════════════════════════════════════");
+        System.out.println("               Sorted Array Elements :                 ");
         printInColumns(array); 
+        System.out.println("═══════════════════════════════════════════════════════");
     }
      
     public static void insertionSort() {
         clearConsole();
         array = original.clone();
         
-        System.out.println("══════════════════════════════════════════════════════");
-        System.out.println("         ───✧─✦── INSERTION SORT ──✦─✧───          ");
-        System.out.println("══════════════════════════════════════════════════════");
+        System.out.println("═══════════════════════════════════════════════════════");
+        System.out.println("         ───✧─✦── INSERTION SORT ──✦─✧───           ");
+        System.out.println("═══════════════════════════════════════════════════════");
+        System.out.println("                Given Array Elements:                  "); 
+        printInColumns(array);
+        System.out.println("───────────────────────────────────────────────────────"); 
         System.out.println();
         
-        System.out.println("Given Array Elements : ");
-        printInColumns(array);
-        System.out.println();
-    
         for (int i = 1; i < array.length; i++) {
             int key = array[i];
             int j = i - 1;
@@ -233,23 +233,25 @@ public class CS2A_Group8_Lab3 {
             }
             array[j + 1] = key;
     
-            System.out.println("Iteration " + i + ":");
+            
+            System.out.println("○ Iteration " + i + ":");
             printInColumns(array); 
             System.out.println();
         }
-    
-        System.out.println("Sorted Array Elements : ");
+        System.out.println("═══════════════════════════════════════════════════════");
+        System.out.println("               Sorted Array Elements :                 ");
         printInColumns(array); 
+        System.out.println("═══════════════════════════════════════════════════════");
     }
     
     public static boolean exit() {
         clearConsole();
         
-        System.out.println("══════════════════════════════════════════════════════");
+        System.out.println("═══════════════════════════════════════════════════════");
         System.out.println("                     TRY AGAIN ?                      ");
-        System.out.println("══════════════════════════════════════════════════════");
+        System.out.println("═══════════════════════════════════════════════════════");
         System.out.println("                [Y] Yes       [N] No                  ");
-        System.out.println("──────────────────────────────────────────────────────");
+        System.out.println("───────────────────────────────────────────────────────");
         System.out.println();
         
         while (true) {
@@ -260,7 +262,7 @@ public class CS2A_Group8_Lab3 {
             } else if (action.equalsIgnoreCase("N")) {
                 return false;
             } else 
-                System.out.println(" ▶ Invalid action. Enter [Y] if Yes or [N] if No.");
+                System.out.println("\n  ✧ Invalid action. Enter [Y] if Yes or [N] if No. ✧ \n");
         }
     }
     
@@ -272,7 +274,7 @@ public class CS2A_Group8_Lab3 {
     
     public static void printInColumns(int[] arr) {
         for (int idx = 0; idx < arr.length; idx++) {
-            System.out.printf("%-11d", arr[idx]); 
+            System.out.printf("%11d", arr[idx]); 
             
             // Wrap line every 5 elements
             if ((idx + 1) % 5 == 0) {
@@ -301,9 +303,9 @@ public class CS2A_Group8_Lab3 {
     
     public static void enterButton(String prompt) {
         System.out.println();
-        System.out.println("──────────────────────────────────────────────────────");
+        System.out.println("───────────────────────────────────────────────────────");
         System.out.println(prompt);
-        System.out.println("──────────────────────────────────────────────────────");
+        System.out.println("───────────────────────────────────────────────────────");
         
         sc.nextLine(); 
         clearConsole();
