@@ -8,6 +8,7 @@ import java.util.Scanner;
  * Laboratory Exercise #3
  * Date: Sept 7 , 2026
  */
+//try github//
 public class CS2A_Group8_Lab3 {
     static int [] array = null;
     static Scanner sc = new Scanner(System.in);
